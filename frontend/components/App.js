@@ -1,7 +1,6 @@
 import React from 'react'
-import Todo from './Todo'
-
-
+import TodoList from './TodoList';
+import TodoForm from './TodoForm'
 class App extends React.Component {
   constructor() {
     super();
@@ -27,20 +26,8 @@ class App extends React.Component {
       <div>
       <h1>Todos</h1>
 
-
-      <ul>
-        {
-          todos.map(todo=> {
-            return (<Todo todo={todo}/>)
-          })
-        }
-      </ul>
-
-      <form>
-        <input/>
-        <button>Add</button>
-      </form>
-
+      <TodoList todos={todos} />
+      <TodoForm />
       <button>Clear</button>
       </div>
     );
